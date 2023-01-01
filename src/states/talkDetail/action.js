@@ -56,6 +56,7 @@ function asyncToggleLikeTalkDetail() {
       await api.toggleLikeTalk(talkDetail.id);
     } catch (error) {
       alert(error.message);
+      dispatch(toggleLikeTalkDetailActionCreator(authUser.id));
     }
     dispatch(hideLoading());
   };
